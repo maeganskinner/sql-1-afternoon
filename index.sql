@@ -1,11 +1,11 @@
 1.
 CREATE TABLE person (
     id SERIAL PRIMARY KEY
-    name VARCHAR
+    name VARCHAR(100)
     age INTEGER
     height INTEGER
-    city VARCHAR
-    favorite_color VARCHAR
+    city VARCHAR(100)
+    favorite_color VARCHAR(100)
 )
 
 2.INSERT INTO person ( name, age, height, city, favorite_color ) 
@@ -25,7 +25,7 @@ CREATE TABLE person (
 
 7.SELECT * FROM person ORDER BY age = 18;
 
-8. SELECT * FROM person ORDER BY age < 20 AND > 30 ASC;
+8. SELECT * FROM person ORDER BY age < 20 OR > 30 ASC;
 
 9.SELECT * FROM person ORDER BY age != 27;
 
@@ -33,7 +33,7 @@ CREATE TABLE person (
 
 11. SELECT * FROM person ORDER BY favorite_color != 'red' AND favorite_color 'blue';
 
-12. SELECT * FROM person ORDER BY favorite_color = 'orange' AND favorite_color 'green';
+12. SELECT * FROM person ORDER BY favorite_color = 'orange' OR favorite_color 'green';
 
 13.SELECT * FROM person ORDER BY favorite_color =  IN ('orange','blue','green');
 
@@ -44,7 +44,7 @@ CREATE TABLE person (
 1.CREATE TABLE orders (
     order_id SERIAL PRIMARY KEY
     person_id   INTEGER
-    product_name VARCHAR
+    product_name VARCHAR(100)
     product_price INTEGER
     quantity INTEGER
 )
